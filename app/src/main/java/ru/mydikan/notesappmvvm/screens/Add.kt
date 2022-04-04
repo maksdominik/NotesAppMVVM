@@ -21,48 +21,6 @@ import ru.mydikan.notesappmvvm.navigation.NavRoute
 import ru.mydikan.notesappmvvm.ui.theme.NotesAppMVVMTheme
 
 @Composable
-fun AddScreen(navController: NavHostController) {
-    var title by remember { mutableStateOf("")}
-    var subtitle by remember { mutableStateOf("")}
-    Scaffold {
-        Column(
-            modifier = Modifier.fillMaxSize(),
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.Center
-        ) {
-            Text(
-                text = "Add new note",
-                fontSize = 18.sp,
-                fontWeight = FontWeight.Bold,
-                modifier = Modifier.padding(vertical = 8.dp)
-            )
-            
-            OutlinedTextField(
-                value = title,
-                onValueChange = { title = it},
-                label = { Text(text = "Note title") }
-            )
-            OutlinedTextField(
-                value = subtitle,
-                onValueChange = { subtitle = it},
-                label = { Text(text = "Note subtitle") }
-            )
-            Button(
-                modifier = Modifier.padding(top = 16.dp),
-                onClick = {
-                    navController.navigate(NavRoute.Main.route)
-                }
-            ) {
-                Text(text = "Add note")
-            }
-        }
-    }
-}
+fun Add(navController: NavHostController) {
 
-@Preview
-@Composable
-fun prevAddScreen() {
-    NotesAppMVVMTheme {
-        AddScreen(navController = rememberNavController())
-    }
 }

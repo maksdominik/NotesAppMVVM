@@ -19,46 +19,5 @@ import androidx.navigation.compose.rememberNavController
 import ru.mydikan.notesappmvvm.ui.theme.NotesAppMVVMTheme
 
 @Composable
-fun NoteScreen(navController: NavHostController) {
-    Scaffold(
-        modifier = Modifier.fillMaxSize()
-    ) {
-        Column(
-            modifier = Modifier.fillMaxSize(),
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.Center
-        ) {
-            Card(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .padding(32.dp)
-            ) {
-                Column(
-                    modifier = Modifier.padding(vertical = 8.dp),
-                    horizontalAlignment = Alignment.CenterHorizontally
-                ) {
-                    Text(
-                        text = "Title",
-                        fontSize = 24.sp,
-                        fontWeight = FontWeight.Bold,
-                        modifier = Modifier.padding(top = 32.dp)
-                    )
-                    Text(
-                        text = "Subtitle",
-                        fontSize = 18.sp,
-                        fontWeight = FontWeight.Light,
-                        modifier = Modifier.padding(top = 16.dp)
-                    )
-                }
-            }
-        }
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun prevNoteScreen() {
-    NotesAppMVVMTheme {
-        NoteScreen(navController = rememberNavController())
-    }
+fun Note(navController: NavHostController) {
 }

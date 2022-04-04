@@ -20,59 +20,6 @@ import ru.mydikan.notesappmvvm.navigation.NavRoute
 import ru.mydikan.notesappmvvm.ui.theme.NotesAppMVVMTheme
 
 @Composable
-fun MainScreen(navController: NavHostController) {
-    Scaffold(
-        floatingActionButton = {
-            FloatingActionButton(
-                onClick = {
-                    navController.navigate(NavRoute.Add.route)
-                }) {
-                Icon(
-                    imageVector = Icons.Filled.Add,
-                    contentDescription = "Add Icons",
-                    tint = Color.White
-                )
-            }
-        }
-    ) {
-        Column () {
-        NoteItem(title = "Note 1", subtitle = "Subtitle for note 1", navController = navController)
-        NoteItem(title = "Note 2", subtitle = "Subtitle for note 2", navController = navController)
-        NoteItem(title = "Note 3", subtitle = "Subtitle for note 3", navController = navController)
-        NoteItem(title = "Note 4", subtitle = "Subtitle for note 4", navController = navController)
-        }
-    }
-}
+fun Main(navController: NavHostController) {
 
-@Composable
-fun NoteItem(title: String, subtitle: String, navController: NavHostController) {
-    Card (
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(vertical = 8.dp, horizontal = 24.dp)
-            .clickable {
-                navController.navigate(NavRoute.Note.route)
-            },
-        elevation = 6.dp
-    ) {
-        Column (
-            modifier = Modifier.padding(vertical = 8.dp),
-            horizontalAlignment = CenterHorizontally
-        ) {
-            Text(
-                text = title,
-                fontSize = 24.sp,
-                fontWeight = FontWeight.Bold
-            )
-            Text(text = subtitle)
-        }
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun prevMainScreen() {
-    NotesAppMVVMTheme {
-        MainScreen(navController = rememberNavController())
-    }
 }

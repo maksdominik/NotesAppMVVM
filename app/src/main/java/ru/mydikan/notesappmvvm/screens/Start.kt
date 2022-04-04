@@ -15,44 +15,6 @@ import ru.mydikan.notesappmvvm.navigation.NavRoute
 import ru.mydikan.notesappmvvm.ui.theme.NotesAppMVVMTheme
 
 @Composable
-fun StartScreen(navController: NavHostController) {
-    Scaffold (
-        modifier = Modifier.fillMaxSize()
-    ) {
-        Column(
-            modifier = Modifier.fillMaxSize(),
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.Center
-        ) {
-            Text(text = "What will we use?")
-            Button(
-                onClick = {
-                    navController.navigate(route = NavRoute.Main.route)
-                },
-                modifier = Modifier
-                    .width(200.dp)
-                    .padding(vertical = 8.dp)
-            ) {
-                Text(text = "Room database")
-            }
-            Button(
-                onClick = {
-                    navController.navigate(route = NavRoute.Main.route)
-                },
-                modifier = Modifier
-                    .width(200.dp)
-                    .padding(vertical = 8.dp)
-            ) {
-                Text(text = "Firebase database")
-            }
-        }
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun prevStartScreen() {
-    NotesAppMVVMTheme {
-        StartScreen(navController = rememberNavController())
-    }
+fun Start(navController: NavHostController) {
+    Text(text = "Notes App test")
 }

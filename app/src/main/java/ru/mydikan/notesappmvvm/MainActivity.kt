@@ -18,12 +18,11 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             NotesAppMVVMTheme {
-                // A surface container using the 'background' color from the theme
-                Scaffold (
+                Scaffold(
                     topBar = {
                         TopAppBar(
                             title = {
-                                Text(text = "NotesApp")
+                                Text(text = "Notes App")
                             },
                             backgroundColor = Color.Blue,
                             contentColor = Color.White,
@@ -33,7 +32,7 @@ class MainActivity : ComponentActivity() {
                     content = {
                         Surface(
                             modifier = Modifier.fillMaxSize(),
-                            color = MaterialTheme.colors.background
+                            color =  MaterialTheme.colors.background
                         ) {
                             NotesNavHost()
                         }
@@ -43,7 +42,6 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
 
 @Preview(showBackground = true)
 @Composable
