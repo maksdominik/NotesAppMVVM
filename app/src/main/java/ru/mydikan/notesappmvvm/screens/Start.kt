@@ -18,6 +18,9 @@ import ru.mydikan.notesappmvvm.MainViewModel
 import ru.mydikan.notesappmvvm.MainViewModelFactory
 import ru.mydikan.notesappmvvm.navigation.NavRoute
 import ru.mydikan.notesappmvvm.ui.theme.NotesAppMVVMTheme
+import ru.mydikan.notesappmvvm.utils.Constants.Keys.FIREBASE_DATABASE
+import ru.mydikan.notesappmvvm.utils.Constants.Keys.ROOM_DATABASE
+import ru.mydikan.notesappmvvm.utils.Constants.Keys.WHAT_WILL_WE_USE
 import ru.mydikan.notesappmvvm.utils.TYPE_FIREBASE
 import ru.mydikan.notesappmvvm.utils.TYPE_ROOM
 
@@ -34,7 +37,7 @@ fun StartScreen(navController: NavHostController, viewModel: MainViewModel) {
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
-            Text(text = "What will we use?")
+            Text(text = WHAT_WILL_WE_USE)
             Button(
                 onClick = {
                     mViewModel.initDatabase(TYPE_ROOM) {
@@ -46,7 +49,7 @@ fun StartScreen(navController: NavHostController, viewModel: MainViewModel) {
                     .width(200.dp)
                     .padding(vertical = 8.dp)
             ) {
-                Text(text = "Room database")
+                Text(text = ROOM_DATABASE)
             }
             Button(
                 onClick = {
@@ -59,7 +62,7 @@ fun StartScreen(navController: NavHostController, viewModel: MainViewModel) {
                     .width(200.dp)
                     .padding(vertical = 8.dp)
             ) {
-                Text(text = "Firebase database")
+                Text(text = FIREBASE_DATABASE)
             }
         }
     }
