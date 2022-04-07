@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1060858360497",
+    "project_id": "notes-app-48158",
+    "storage_bucket": "notes-app-48158.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1060858360497:android:6adfc49090da4acae16890",
+        "android_client_info": {
+          "package_name": "ru.mydikan.notesappmvvm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1060858360497-gptfthcnn0lvohmrcm259aghnlh2c0st.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8VEyuA-2jiMLguAqPXdEJTsNFz8FIJuE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1060858360497-gptfthcnn0lvohmrcm259aghnlh2c0st.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
